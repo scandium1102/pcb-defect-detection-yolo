@@ -31,6 +31,17 @@ The values are transcribed from the [nine-class](assets/pcb-9class-pr.png) and [
 | CFO | 0.711 | 0.739 | 2,245 |
 | BMFO | 0.874 | — | — |
 
+## Recompute the published results
+
+With Python 3.10 or later, run:
+
+~~~bash
+python tools/summarize_results.py
+python -m unittest discover -s tests -v
+~~~
+
+The checked-in [metrics table](data/reported_metrics.csv) transcribes the final precision-recall legends and five-class count chart. The script recalculates mAP@0.5 for 9 and 5 classes (0.826 and 0.815), their difference (−0.011), and the 15,939 annotated instances. It also identifies the highest and lowest AP classes. The calculation starts from reported per-class AP values. Training and inference reproduction require the original split, annotations, configuration, and weights.
+
 ## Included evidence
 
 - Training curves and precision-recall figures
