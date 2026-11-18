@@ -57,7 +57,10 @@ This repository is an academic portfolio record. The original dataset, model wei
 
 ```text
 assets/       Public evaluation figures
+data/         Transcribed per-class AP and five-class count table
 docs/         Evidence, boundaries, and limitations
+tests/        Unit tests verifying reported summary metrics
+tools/        Metrics summary script (summarize_results.py)
 ```
 
 ## License
